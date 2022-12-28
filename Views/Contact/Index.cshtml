@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CrudLogin.Models.Contact>;
+
+@{
+    ViewData["Title"] = "User Controller";
+}
+
+<h1>個人情報の一覧</h1>
+<a asp-action="Create">作成</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ユーザーID</th>
+            <th>名前</th>
+            <th>住所</th>
+            <th>市</th>
+            <th>県</th>
+            <th>丁目</th>
+            <th>メール</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ContactId</td>
+                <td>@item.Name</td>
+                <td>@item.Address</td>
+                <td>@item.City</td>
+                <td>@item.State</td>
+                <td>@item.Zip</td>
+                <td>@item.Email</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ContactId">編集</a>
+                    <a asp-action="Read" asp-route-id="@item.ContactId">詳細</a>
+                    <a asp-action="Delete" asp-route-id="@item.ContactId">削除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

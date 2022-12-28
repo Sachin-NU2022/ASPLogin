@@ -1,0 +1,31 @@
+﻿@model CrudLogin.Models.Contact;
+
+@{
+    ViewData["Title"] = "Detail Page";
+}
+
+<h1>詳細ページ</h1>
+<h2>ユーザー情報</h2>
+<a asp-action="Index">ホームページ</a>
+
+<div>
+    <dl>
+        <dt>ユーザーID:</dt>
+        <dd>@Model.ContactId</dd>
+        <dt>名前:</dt>
+        <dd>@Model.Name</dd>
+        <dt>住所:</dt>
+        <dd>@Model.Address</dd>
+        <dt>市:</dt>
+        <dd>@Model.City</dd>
+        <dt>県:</dt>
+        <dd>@Model.State</dd>
+        <dt>丁目:</dt>
+        <dd>@Model.Zip</dd>
+        <dt>メール:</dt>
+        <dd>@Model.Email</dd>
+    </dl>
+</div>
+
+
+

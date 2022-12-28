@@ -1,0 +1,42 @@
+﻿@model CrudLogin.Models.Contact;
+
+@{
+    ViewData["Title"] = "登録フォーム";
+}
+
+<h1>個人情報 フォーム</h1>
+<a asp-action="Index">ホームページ</a>
+<p>下記のフォームに個人情報入れてください。</p>
+
+<form class="form-control" method="post">
+    <div>
+        <label asp-for="ContactId" class="form-label"></label>
+        <input asp-for="ContactId" type="text" required />
+    </div><br />
+    <div>
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" type="text" />
+    </div><br />
+    <div>
+        <label asp-for="Address" class="form-label"></label>
+        <input asp-for="Address" type="text" />
+    </div><br />
+    <div>
+        <label asp-for="City" class="form-label"></label>
+        <input asp-for="City" type="text" />
+    </div><br />
+        <div>
+        <label asp-for="State" class="form-label"></label>
+        <input asp-for="State" type="text" />
+    </div><br />
+    <div>
+        <label asp-for="Zip" class="form-label"></label>
+        <input asp-for="Zip" type="text" />
+    </div><br />
+        <div>
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" type="email" />
+    </div><br />
+    <input type="submit" value="Create" class="btn btn-primary" />
+</form>
+
